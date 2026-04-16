@@ -1343,11 +1343,17 @@ export default function Home() {
                     message: form.message.value,
                     };
 
+                    // emailjs.send(
+                    //     "service_mwjxfzo",
+                    //     "template_yh834pk",
+                    //     templateParams,
+                    //     "bhkwgA4JG6gxM8USu"
+                    // )
                     emailjs.send(
-                        "service_mwjxfzo",
-                        "template_yh834pk",
+                        process.env.REACT_APP_SERVICE_ID,
+                        process.env.REACT_APP_TEMPLATE_ID,
                         templateParams,
-                        "bhkwgA4JG6gxM8USu"
+                        process.env.REACT_APP_PUBLIC_KEY
                     )
                     .then(
                         () => {
