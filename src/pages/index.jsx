@@ -370,12 +370,12 @@ export default function Home() {
                 </div>
 
                 <div className="flex gap-4 mt-8">
-                    <button onClick={() => scrollToSection("domain")} className="bg-white text-black px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-gray-200 hover:shadow-lg">
-                    Explore Domain
+                    <button onClick={() => scrollToSection("domain")} className="bg-white text-black px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-gray-200 hover:shadow-lg flex items-center gap-2">
+                    <BookOpen size={18} strokeWidth={3} />Explore Domain
                     </button>
 
                     <button onClick={() => scrollToSection("milestones")} className="border border-white px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-white hover:text-black hover:shadow-lg flex items-center gap-2">
-                    View Progress
+                    <Clock size={18} strokeWidth={3} />View Progress
                     </button>
                 </div>
                 </div>
@@ -1410,10 +1410,10 @@ export default function Home() {
                     {/* BUTTON */}
                     <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-[#2c7a7b] text-white py-3 rounded-lg hover:bg-[#0f4c5c] transition"
+                    className="w-full flex items-center justify-center gap-2 bg-[#2c7a7b] text-white py-3 rounded-lg hover:bg-[#0f4c5c] transition font-semibold"
                     disabled={loading}
                     >
-                    <Mail size={16} />
+                    <Mail size={16} strokeWidth={3}/>
                     {loading ? "Sending..." : "Send Message"}
                     </button>
 
