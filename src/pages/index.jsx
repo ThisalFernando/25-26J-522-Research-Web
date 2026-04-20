@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import methodologyImg from "../images/methodology.png";
+import methodologyImg from "../images/methodology.jpeg";
 import nodejs from "../images/nodejs.webp";
 import postman from "../images/postman.png";
 import python from "../images/python.png";
@@ -8,6 +8,9 @@ import reactnative from "../images/reactnative.png";
 import tailwind from "../images/tailwindcss.png";
 import vite from "../images/vite.png";
 import mongodb from "../images/mongodb.png";
+import docker from "../images/docker.png";
+import flask from "../images/flask.png";
+import kubernetes from "../images/kubernetes.png";
 import supervisor from "../images/ThiliniJayalath.jpg";
 import cosupervisor from "../images/HansiDeSilva.jpg";
 import external from "../images/RohanGunawardhana.jpg";
@@ -37,6 +40,7 @@ import {
   Presentation,
   Users,
   Mail,
+  HeartPulse,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
@@ -78,6 +82,9 @@ export default function Home() {
     { src: reactnative, alt: "React Native" },
     { src: vite, alt: "Vite" },
     { src: python, alt: "Python" },
+    { src: flask, alt: "Flask" },
+    { src: docker, alt: "Docker" },
+    { src: kubernetes, alt: "Kubernetes" },
     { src: mongodb, alt: "MongoDB" },
     { src: postman, alt: "Postman" }
   ];
@@ -370,11 +377,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex gap-4 mt-8">
-                    <button onClick={() => scrollToSection("domain")} className="bg-white text-black px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-gray-200 hover:shadow-lg flex items-center gap-2">
+                    <button onClick={() => scrollToSection("domain")} className="bg-white text-sm md:text-md text-black px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-gray-200 hover:shadow-lg flex items-center gap-2">
                     <BookOpen size={18} strokeWidth={3} />Explore Domain
                     </button>
 
-                    <button onClick={() => scrollToSection("milestones")} className="border border-white px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-white hover:text-black hover:shadow-lg flex items-center gap-2">
+                    <button onClick={() => scrollToSection("milestones")} className="text-sm md:text-md border border-white px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-110 hover:bg-white hover:text-black hover:shadow-lg flex items-center gap-2">
                     <Clock size={18} strokeWidth={3} />View Progress
                     </button>
                 </div>
@@ -382,7 +389,7 @@ export default function Home() {
             </div>
 
             {/* ======================= */}
-            {/* 🔬 RESEARCH GAP SECTION */}
+            {/* 📚 LITERATURE SURVEY */}
             {/* ======================= */}
 
             <div id="domain" className="bg-[#f8fafc] text-gray-800 px-6 py-20">
@@ -390,8 +397,8 @@ export default function Home() {
                 <div className="flex flex-col items-center mb-12">
 
                     {/* ICON BOX */}
-                    <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-100 mb-4">
-                        <BookOpen size={28} className="text-blue-700" />
+                    <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#2c7a7b]/20 mb-4">
+                        <BookOpen size={28} className="text-[#2c7a7b]" />
                     </div>
 
                     {/* HEADING */}
@@ -405,6 +412,118 @@ export default function Home() {
                     </p>
 
                 </div>
+
+                <h2 className="text-xl md:text-2xl font-bold text-center mb-12 text-[#0f4c5c]">
+                Literature Survey
+                </h2>
+
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-[-60px]">
+
+                {/* 🔷 CARD 1 - CAD (NEW) */}
+                <div className="bg-white border-t-4 border-[#0f4c5c] rounded-xl p-6 shadow-md transition duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(44,122,123,0.3)]">
+
+                    <h3 className="text-lg font-semibold text-[#0f4c5c] mb-3 flex gap-2">
+                    <HeartPulse className="text-red-600"/>Detection of Arrhythmia
+                    </h3>
+
+                    <p className="text-sm text-gray-700 leading-relaxed text-justify mb-4">
+                    Cardiovascular diseases (CVDs) are the leading cause of death worldwide, with millions of lives lost every year [1]. Among these, cardiac arrhythmia, an irregular heartbeat caused by problems in the heart’s electrical system poses a significant health risk. One-dimensional convolutional neural networks (1D-CNNs) are particularly suited for analyzing raw ECG signals [2], while two-dimensional convolutional neural networks (2D-CNNs) excel in analyzing image-based ECG data such as scalograms or printed ECG charts [3], [4]. Hybrid models, which integrate multiple data modalities (1D signals and 2D images), offer a more comprehensive representation of ECG data by combining temporal and spatial information [5], [6].  Ahmed et al. [2] proposed a 1D-CNN model for classifying arrhythmias using the MIT-BIH dataset. Their architecture extracted heartbeat segments centered on the R-peak, ensuring the inclusion of important ECG components such as the P-wave, QRS complex, and T-wave.
+                    </p>
+
+                    <p className="text-xs text-gray-500">
+                    [1] “ArrhythmiaVision: Resource-Conscious Deep Learning Models with Visual Explanations for ECG Arrhythmia Classification,” Arxiv.org, 2019.<br/>
+                    [2] A. A. Ahmed, W. Ali, T. A. A. Abdullah, and S. J. Malebary, “Classifying Cardiac Arrhythmia from ECG Signal Using 1D CNN Deep Learning Model,” Mathematics, vol. 11, no. 3, p. 562, Jan. 2023.<br/>
+                    [3] E. Izci, M. A. Ozdemir, M. Degirmenci, and A. Akan, “Cardiac Arrhythmia Detection from 2D ECG Images by Using Deep Learning Technique,” 2019 Medical Technologies Congress (TIPTEKNO), Oct. 2019.<br/>
+                    [4] T. Wang, C. Lu, Y. Sun, M. Yang, C. Liu, and C. Ou, “Automatic ECG Classification Using Continuous Wavelet Transform and Convolutional Neural Network,” Entropy, vol. 23, no. 1, p. 119, Jan. 2021.<br/>
+                    [5] P. Madan, V. Singh, D. P. Singh, M. Diwakar, B. Pant, and A. Kishor, “A Hybrid Deep Learning Approach for ECG-Based Arrhythmia Classification,” Bioengineering, vol. 9, no. 4, p. 152, Apr. 2022.<br/>
+                    [6] T. Mahmud et al., “Ensemble Deep Learning Approach for ECG-Based Cardiac Disease Detection: Signal and Image Analysis,” Sep. 2023.
+                    </p>
+
+                </div>
+
+                {/* 🔷 CARD 2 */}
+                <div className="bg-white border-t-4 border-[#0f4c5c] rounded-xl p-6 shadow-md transition duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(44,122,123,0.3)]">
+                    <h3 className="text-lg font-semibold text-[#0f4c5c] mb-3 flex gap-2">
+                    <HeartPulse className="text-red-600"/>Coronary Artery Disease (CAD) Detection (ISCHEMIA)
+                    </h3>
+
+                    <p className="text-sm text-gray-700 leading-relaxed text-justify mb-4">
+                    Coronary Artery Disease (CAD), particularly ischemia, is characterized by subtle 
+                    ST-T segment abnormalities that are often difficult to detect using traditional ECG 
+                    analysis methods. Recent studies have explored deep learning approaches such as 
+                    Convolutional Neural Networks (CNNs) and hybrid CNN-LSTM architectures to capture 
+                    both spatial and temporal dependencies in ECG signals. These models have demonstrated 
+                    improved performance in identifying ischemic patterns compared to classical machine 
+                    learning techniques.
+                    <br /><br />
+                    Additionally, time-frequency representations such as Continuous Wavelet Transform (CWT) 
+                    have been widely used to enhance feature extraction, enabling better detection of 
+                    transient ischemic changes. However, most existing approaches focus on single-modality 
+                    ECG signals without integrating clinical features, limiting their applicability in 
+                    real-world primary care settings. Furthermore, challenges such as noise sensitivity, 
+                    inter-patient variability, and lack of explainability remain significant barriers.
+                    <br /><br />
+                    This research addresses these limitations by proposing a hybrid deep learning framework 
+                    that integrates ECG signals with clinical features, incorporates explainability 
+                    techniques such as Grad-CAM, and applies rule-based post-processing to improve 
+                    diagnostic accuracy and reliability in CAD detection.
+                    </p>
+
+                    <p className="text-xs text-gray-500">
+                    [1] Y. Xia et al., "Detecting Coronary Artery Disease from ECG Signals Using Deep Learning," IEEE Access, 2021.<br/>
+                    [2] A. Hannun et al., "Cardiologist-Level Arrhythmia Detection Using Deep Neural Networks," Nat. Med., 2019.<br/>
+                    [3] Z. Zhang et al., "Hybrid CNN-LSTM Model for ECG Classification," IEEE JBHI, 2020.<br/>
+                    [4] S. Kiranyaz et al., "Real-Time Patient-Specific ECG Classification," IEEE Trans. Biomed. Eng., 2016.<br/>
+                    [5] R. Rajpurkar et al., "Cardiologist-Level Detection of Abnormal Heart Rhythms," arXiv, 2017.
+                    </p>
+                </div>
+
+                {/* 🔷 CARD 3 */}
+                <div className="bg-white border-t-4 border-[#0f4c5c] rounded-xl p-6 shadow-md transition duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(44,122,123,0.3)]">
+                    <h3 className="text-lg font-semibold text-[#0f4c5c] mb-3 flex gap-2">
+                    <HeartPulse className="text-red-600"/>Detection of Supra-ventricular Tachycardia (SVT)
+                    </h3>
+
+                    <p className="text-sm text-gray-700 leading-relaxed text-justify mb-4">
+                    Supraventricular tachycardia (SVT) is a rapid cardiac rhythm disorder that originates above the ventricles and requires accurate early detection for effective clinical management. Recent research has shown that deep learning methods are increasingly effective in ECG-based diagnosis of supraventricular arrhythmias. Kwon et al. [1] reported that deep-learning-based models can detect paroxysmal supraventricular tachycardia from sinus-rhythm ECGs, indicating that such models can capture latent diagnostic features beyond conventional manual analysis. In addition, Kim et al. [2] demonstrated that deep learning can classify the underlying mechanisms of PSVT using sinus-rhythm ECG data. For normal ECG reference data, the MIT-BIH Normal Sinus Rhythm Database by Moody and Mark [3] remains a widely accepted benchmark source. Furthermore, Shahid et al. [4] emphasized that deep learning architectures, especially CNN-based approaches, have shown strong performance in arrhythmia detection and classification tasks. Therefore, this study applies deep learning models to ECG images in order to distinguish SVT from normal sinus rhythm and support the development of an automated detection system.
+                    </p>
+
+                    <p className="text-xs text-gray-500">
+                    [1] J. M. Kwon, K. H. Lee, K. H. Jeon, H. M. Lee, and B. H. Oh, “Deep-Learning-Based Detection of Paroxysmal Supraventricular Tachycardia Using Sinus-Rhythm Electrocardiograms,” Journal of Clinical Medicine, vol. 11, no. 15, 2022.<br/>
+                    [2] J. Kim, J. Ahn, S. Hong, D. Yang, and B. Joung, “Classification of underlying paroxysmal supraventricular tachycardia using deep learning from sinus rhythm ECGs,” Frontiers in Cardiovascular Medicine, 2024.<br/>
+                    [3] G. B. Moody and R. G. Mark, “MIT-BIH Normal Sinus Rhythm Database,” PhysioNet, 1999.<br/>
+                    [4] M. Shahid, S. Rappon, and W. Berta, “Deep learning for ECG Arrhythmia detection and classification: an overview of progress for period 2017–2023,” 2023.
+                    </p>
+                </div>
+
+                {/* 🔷 CARD 4 */}
+                <div className="bg-white border-t-4 border-[#0f4c5c] rounded-xl p-6 shadow-md transition duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(44,122,123,0.3)]">
+                    <h3 className="text-lg font-semibold text-[#0f4c5c] mb-3 flex gap-2">
+                    <HeartPulse className="text-red-600"/>Detection of Myocardial Infarction (MI)
+                    </h3>
+
+                    <p className="text-sm text-gray-700 leading-relaxed text-justify mb-4">
+                    Recent studies indicate that cardiovascular diseases, particularly myocardial infarction (MI), remain a major global health issue, highlighting the importance of early detection and prediction. Electrocardiogram (ECG) signals are commonly used for MI diagnosis; however, real-world ECG data are often affected by noise such as baseline wander, motion artifacts, and electromyographic interference, which reduce diagnostic accuracy [1]. Deep learning approaches, especially Convolutional Neural Networks (CNNs), have demonstrated high performance in ECG classification tasks, achieving significant accuracy in MI detection [2]. Moreover, hybrid architectures combining CNN and Transformer models further enhance feature extraction by capturing both spatial and temporal patterns in ECG signals [3]. Despite these advancements, most existing systems focus only on detection using clean data and lack predictive capabilities. Recent research suggests that integrating noise-robust models with temporal forecasting can improve early risk prediction and support better clinical decision-making, particularly in resource-constrained environments [4], [5].
+                    </p>
+
+                    <p className="text-xs text-gray-500">
+                    [1] G. D. Clifford, F. Azuaje, and P. E. McSharry, Advanced Methods and Tools for ECG Data Analysis. Artech House, 2006.<br/>
+                    [2] P. Rajpurkar et al., “Cardiologist-level arrhythmia detection with convolutional neural networks,” Nature Medicine, vol. 25, no. 1, pp. 65–69, 2017.<br/>
+                    [3] A. Vaswani et al., “Attention is all you need,” in Advances in Neural Information Processing Systems (NeurIPS), 2017.<br/>
+                    [4] S. Raghunath et al., “Deep neural networks can predict risk of cardiovascular events from ECG,” Nature Medicine, vol. 26, pp. 15–21, 2020.<br/>
+                    [5] X. Liu, Y. Zhang, and J. Wang, “Deep learning in ECG diagnosis: A review,” Frontiers in Cardiovascular Medicine, vol. 9, 2022.
+                    </p>
+                </div>
+
+                </div>
+
+            </div>
+
+            {/* ======================= */}
+            {/* 🔬 RESEARCH GAP SECTION */}
+            {/* ======================= */}
+
+            <div id="domain" className="bg-[#f8fafc] text-gray-800 px-6 py-20">
 
                 <h2 className="text-xl md:text-2xl font-bold text-center mb-12 text-[#0f4c5c]">
                 Research Gap
@@ -569,28 +688,33 @@ export default function Home() {
 
                 {/* Left */}
                 <div className="bg-[#2c7a7b]/10 p-6 rounded-xl">
-                <ul className="list-disc pl-6 space-y-3 text-md">
+                <ul className="list-disc pl-6 space-y-3 text-sm">
                     <li className="font-semibold text-[#0f4c5c]">
-                    ECG Signal Preprocessing & Feature Extraction
+                    ECG Data Acquisition from Multi-source Datasets (MIT-BIH, PTB-XL, Clinical ECG)
                     </li>
                     <li className="font-semibold text-[#0f4c5c]">
-                    CNN-LSTM Hybrid Model for CAD Detection
+                    Signal Preprocessing (Noise Filtering, Normalization, R-peak Detection, Segmentation)
                     </li>
                     <li className="font-semibold text-[#0f4c5c]">
-                    Multi-disease Prediction (CAD, MI, Arrhythmia, SVT)
+                    Deep Learning Models for Multi-disease Detection (CAD, MI, Arrhythmia, SVT)
                     </li>
                     <li className="font-semibold text-[#0f4c5c]">
-                    Clinical Feature Integration for Improved Accuracy
+                    Hybrid CNN-LSTM Architecture with Time-Frequency Feature Extraction (CWT)
+                    </li>
+                    <li className="font-semibold text-[#0f4c5c]">
+                    Clinical Feature Integration & Risk Scoring for CAD Prediction
+                    </li>
+                    <li className="font-semibold text-[#0f4c5c]">
+                    Post-processing & Rule-based Validation for Improved Accuracy
                     </li>
                 </ul>
                 </div>
 
                 {/* Right */}
-                <div className="bg-[#2c7a7b]/10 p-6 rounded-xl text-gray-700 text-md leading-relaxed text-justify">
-                    The system is developed using a modular deep learning architecture that integrates ECG signal
-                    processing with advanced machine learning models. Each component is designed to enhance diagnostic
-                    accuracy, robustness to noise, and real-time performance. The system is validated using real-world
-                    datasets to ensure reliability and effectiveness in primary care environments.
+                <div className="bg-[#2c7a7b]/10 p-6 rounded-xl text-gray-700 text-sm leading-relaxed text-justify">
+                    The QCardio system follows a modular deep learning architecture that processes ECG data from multiple sources including clinical datasets and real-time inputs. The workflow begins with ECG signal acquisition, followed by preprocessing steps such as noise filtering, normalization, R-peak detection, and heartbeat segmentation to ensure high-quality input.
+                    Advanced deep learning models are then applied for multi-disease prediction, including Coronary Artery Disease (CAD), Myocardial Infarction (MI), Arrhythmia, and Supraventricular Tachycardia (SVT). A hybrid CNN-LSTM architecture is used to capture both spatial and temporal features, while time-frequency representations such as Continuous Wavelet Transform (CWT) enhance pattern recognition.
+                    The system further integrates clinical features to improve CAD risk prediction and applies post-processing techniques such as thresholding, temporal smoothing, and rule-based validation to reduce false positives. This ensures robust, interpretable, and real-time diagnostic support suitable for primary care environments.
                 </div>
 
                 </div>
@@ -693,19 +817,19 @@ export default function Home() {
             </div>
 
             {/* 🔷 CARDS */}
-            <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
 
                 {/* Card 1 */}
                 <div className="bg-white p-6 rounded-xl shadow-md hover:scale-105 transition duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(44,122,123,0.3)]">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#2c7a7b]/20 mb-4">
                     <Zap className="text-[#2c7a7b]" size={22} />
                 </div>
-                <h3 className="text-xl font-bold text-[#0f4c5c] mb-4">
+                <h3 className="text-lg font-bold text-[#0f4c5c] mb-4">
                     Frontend Technologies
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-2">
                     {["React", "Vite", "Tailwind CSS", "React Native"].map((item, i) => (
-                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm w-fit">
                         {item}
                     </span>
                     ))}
@@ -717,12 +841,29 @@ export default function Home() {
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#2c7a7b]/20 mb-4">
                     <Settings className="text-[#2c7a7b]" size={22} />
                 </div>
-                <h3 className="text-xl font-bold text-[#0f4c5c] mb-4">
+                <h3 className="text-lg font-bold text-[#0f4c5c] mb-4">
                     Backend Technologies
                 </h3>
-                <div className="flex flex-wrap gap-2">
-                    {["Node.js", "Python", "MongoDB"].map((item, i) => (
-                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                <div className="flex flex-col gap-2">
+                    {["Node.js", "Python", "Flask", "MongoDB"].map((item, i) => (
+                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm w-fit">
+                        {item}
+                    </span>
+                    ))}
+                </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="bg-white p-6 rounded-xl shadow-md hover:scale-105 transition duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(44,122,123,0.3)]">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#2c7a7b]/20 mb-4">
+                    <Zap className="text-[#2c7a7b]" size={22} />
+                </div>
+                <h3 className="text-lg font-bold text-[#0f4c5c] mb-4">
+                    Cloud Infrastructure
+                </h3>
+                <div className="flex flex-col gap-2">
+                    {["Docker", "Kubernetes"].map((item, i) => (
+                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm w-fit">
                         {item}
                     </span>
                     ))}
@@ -734,12 +875,12 @@ export default function Home() {
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#2c7a7b]/20 mb-4">
                     <Car className="text-[#2c7a7b]" size={22} />
                 </div>
-                <h3 className="text-xl font-bold text-[#0f4c5c] mb-4">
-                    Insurance Integration
+                <h3 className="text-lg font-bold text-[#0f4c5c] mb-4">
+                    API & Testing
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-2">
                     {["Postman", "REST APIs"].map((item, i) => (
-                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                    <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm w-fit">
                         {item}
                     </span>
                     ))}
@@ -758,8 +899,8 @@ export default function Home() {
             <div className="flex flex-col items-center mb-12">
 
                 {/* ICON BOX */}
-                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3e8d9] mb-4">
-                    <Trophy size={28} className="text-[#e35d0b]" />
+                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#2c7a7b]/20 mb-4">
+                    <Trophy size={28} className="text-[#2c7a7b]" />
                 </div>
 
                 {/* HEADING */}
@@ -921,8 +1062,8 @@ export default function Home() {
             {/* HEADER */}
             <div className="flex flex-col items-center mb-12">
 
-                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-100 mb-4">
-                <FileText size={28} className="text-green-600" />
+                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#2c7a7b]/20 mb-4">
+                <FileText size={28} className="text-[#2c7a7b]" />
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0f4c5c]">
@@ -1001,15 +1142,15 @@ export default function Home() {
             {/* HEADER */}
             <div className="flex flex-col items-center mb-12">
 
-                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-purple-100 mb-4">
-                <Presentation size={28} className="text-purple-600" />
+                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#2c7a7b]/20 mb-4">
+                <Presentation size={28} className="text-[#2c7a7b]" />
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0f4c5c]">
                 Presentations
                 </h2>
 
-                <p className="text-gray-500 mt-2">
+                <p className="text-gray-500 mt-2 text-center">
                 Slides from past and upcoming presentations
                 </p>
 
@@ -1024,17 +1165,19 @@ export default function Home() {
                     className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300"
                 >
 
-                    {/* TOP */}
-                    <div className="flex justify-between items-start">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
 
-                    <div>
-                        <div className="flex items-center gap-2 mb-2">
+                    {/* 🔷 LEFT CONTENT */}
+                    <div className="w-full">
+
+                        {/* TITLE + STATUS */}
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 mb-2">
                         <h3 className="text-lg font-semibold text-[#0f4c5c]">
                             {p.title}
                         </h3>
 
                         <span
-                            className={`text-xs px-2 py-1 rounded-full font-semibold
+                            className={`mt-1 sm:mt-0 w-fit text-xs px-2 py-1 rounded-full font-semibold
                             ${
                             p.status === "completed"
                                 ? "bg-green-600 text-white"
@@ -1046,8 +1189,7 @@ export default function Home() {
                         </div>
 
                         {/* META */}
-                        <div className="flex flex-wrap gap-6 text-sm text-gray-600 mb-2">
-
+                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-2">
                         <span className="flex items-center gap-1">
                             <CalendarDays size={14} />
                             {p.date}
@@ -1057,7 +1199,6 @@ export default function Home() {
                             <Presentation size={14} />
                             {p.slides}
                         </span>
-
                         </div>
 
                         {/* DESCRIPTION */}
@@ -1065,10 +1206,9 @@ export default function Home() {
                         {p.description}
                         </p>
 
-                        {/* BUTTONS */}
+                        {/* BUTTON */}
                         {p.status === "completed" ? (
                         <div className="flex gap-3">
-
                             <a
                             href={p.driveLink}
                             target="_blank"
@@ -1088,9 +1228,11 @@ export default function Home() {
 
                     </div>
 
-                    {/* RIGHT ICON */}
-                    <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100">
-                        <Presentation className="text-purple-600" />
+                    {/* 🔷 RIGHT ICON */}
+                    <div className="absolute top-4 right-4 md:static md:top-auto md:right-auto">
+                        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-lg bg-[#2c7a7b]/20">
+                        <Presentation className="text-[#2c7a7b] w-[18px] h-[18px] sm:w-[22px] sm:h-[22px]" />
+                        </div>
                     </div>
 
                     </div>
