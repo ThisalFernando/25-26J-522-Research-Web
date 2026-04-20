@@ -1414,8 +1414,8 @@ export default function Home() {
 
             {/* HEADER */}
             <div className="flex flex-col items-center mb-12 text-center">
-                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-100 mb-4">
-                <Mail size={28} className="text-blue-600" />
+                <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#2c7a7b]/20 mb-4">
+                <Mail size={28} className="text-[#2c7a7b]" />
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0f4c5c]">
