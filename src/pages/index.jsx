@@ -430,7 +430,7 @@ export default function Home() {
                     Cardiovascular diseases (CVDs) are the leading cause of death worldwide, with millions of lives lost every year [1]. Among these, cardiac arrhythmia, an irregular heartbeat caused by problems in the heart’s electrical system poses a significant health risk. One-dimensional convolutional neural networks (1D-CNNs) are particularly suited for analyzing raw ECG signals [2], while two-dimensional convolutional neural networks (2D-CNNs) excel in analyzing image-based ECG data such as scalograms or printed ECG charts [3], [4]. Hybrid models, which integrate multiple data modalities (1D signals and 2D images), offer a more comprehensive representation of ECG data by combining temporal and spatial information [5], [6].  Ahmed et al. [2] proposed a 1D-CNN model for classifying arrhythmias using the MIT-BIH dataset. Their architecture extracted heartbeat segments centered on the R-peak, ensuring the inclusion of important ECG components such as the P-wave, QRS complex, and T-wave.
                     </p>
 
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 mt-4 leading-relaxed">
                     [1] “ArrhythmiaVision: Resource-Conscious Deep Learning Models with Visual Explanations for ECG Arrhythmia Classification,” Arxiv.org, 2019.<br/>
                     [2] A. A. Ahmed, W. Ali, T. A. A. Abdullah, and S. J. Malebary, “Classifying Cardiac Arrhythmia from ECG Signal Using 1D CNN Deep Learning Model,” Mathematics, vol. 11, no. 3, p. 562, Jan. 2023.<br/>
                     [3] E. Izci, M. A. Ozdemir, M. Degirmenci, and A. Akan, “Cardiac Arrhythmia Detection from 2D ECG Images by Using Deep Learning Technique,” 2019 Medical Technologies Congress (TIPTEKNO), Oct. 2019.<br/>
@@ -452,24 +452,26 @@ export default function Home() {
                     ST-T segment abnormalities that are often difficult to detect using traditional ECG 
                     analysis methods. Recent studies have explored deep learning approaches such as 
                     Convolutional Neural Networks (CNNs) and hybrid CNN-LSTM architectures to capture 
-                    both spatial and temporal dependencies in ECG signals. These models have demonstrated 
+                    both spatial and temporal dependencies in ECG signals [1], [3]. These models have demonstrated 
                     improved performance in identifying ischemic patterns compared to classical machine 
                     learning techniques.
                     <br /><br />
                     Additionally, time-frequency representations such as Continuous Wavelet Transform (CWT) 
                     have been widely used to enhance feature extraction, enabling better detection of 
-                    transient ischemic changes. However, most existing approaches focus on single-modality 
+                    transient ischemic changes [3]. However, most existing approaches focus on single-modality 
                     ECG signals without integrating clinical features, limiting their applicability in 
                     real-world primary care settings. Furthermore, challenges such as noise sensitivity, 
-                    inter-patient variability, and lack of explainability remain significant barriers.
+                    inter-patient variability, and lack of explainability remain significant barriers [4].
                     <br /><br />
-                    This research addresses these limitations by proposing a hybrid deep learning framework 
+                    Advanced deep learning systems have demonstrated cardiologist-level performance in ECG 
+                    interpretation tasks, highlighting their potential for automated diagnosis [2], [5]. 
+                    This research addresses existing limitations by proposing a hybrid deep learning framework 
                     that integrates ECG signals with clinical features, incorporates explainability 
                     techniques such as Grad-CAM, and applies rule-based post-processing to improve 
                     diagnostic accuracy and reliability in CAD detection.
                     </p>
 
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 mt-4 leading-relaxed">
                     [1] Y. Xia et al., "Detecting Coronary Artery Disease from ECG Signals Using Deep Learning," IEEE Access, 2021.<br/>
                     [2] A. Hannun et al., "Cardiologist-Level Arrhythmia Detection Using Deep Neural Networks," Nat. Med., 2019.<br/>
                     [3] Z. Zhang et al., "Hybrid CNN-LSTM Model for ECG Classification," IEEE JBHI, 2020.<br/>
@@ -488,7 +490,7 @@ export default function Home() {
                     Supraventricular tachycardia (SVT) is a rapid cardiac rhythm disorder that originates above the ventricles and requires accurate early detection for effective clinical management. Recent research has shown that deep learning methods are increasingly effective in ECG-based diagnosis of supraventricular arrhythmias. Kwon et al. [1] reported that deep-learning-based models can detect paroxysmal supraventricular tachycardia from sinus-rhythm ECGs, indicating that such models can capture latent diagnostic features beyond conventional manual analysis. In addition, Kim et al. [2] demonstrated that deep learning can classify the underlying mechanisms of PSVT using sinus-rhythm ECG data. For normal ECG reference data, the MIT-BIH Normal Sinus Rhythm Database by Moody and Mark [3] remains a widely accepted benchmark source. Furthermore, Shahid et al. [4] emphasized that deep learning architectures, especially CNN-based approaches, have shown strong performance in arrhythmia detection and classification tasks. Therefore, this study applies deep learning models to ECG images in order to distinguish SVT from normal sinus rhythm and support the development of an automated detection system.
                     </p>
 
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 mt-4 leading-relaxed">
                     [1] J. M. Kwon, K. H. Lee, K. H. Jeon, H. M. Lee, and B. H. Oh, “Deep-Learning-Based Detection of Paroxysmal Supraventricular Tachycardia Using Sinus-Rhythm Electrocardiograms,” Journal of Clinical Medicine, vol. 11, no. 15, 2022.<br/>
                     [2] J. Kim, J. Ahn, S. Hong, D. Yang, and B. Joung, “Classification of underlying paroxysmal supraventricular tachycardia using deep learning from sinus rhythm ECGs,” Frontiers in Cardiovascular Medicine, 2024.<br/>
                     [3] G. B. Moody and R. G. Mark, “MIT-BIH Normal Sinus Rhythm Database,” PhysioNet, 1999.<br/>
@@ -506,7 +508,7 @@ export default function Home() {
                     Recent studies indicate that cardiovascular diseases, particularly myocardial infarction (MI), remain a major global health issue, highlighting the importance of early detection and prediction. Electrocardiogram (ECG) signals are commonly used for MI diagnosis; however, real-world ECG data are often affected by noise such as baseline wander, motion artifacts, and electromyographic interference, which reduce diagnostic accuracy [1]. Deep learning approaches, especially Convolutional Neural Networks (CNNs), have demonstrated high performance in ECG classification tasks, achieving significant accuracy in MI detection [2]. Moreover, hybrid architectures combining CNN and Transformer models further enhance feature extraction by capturing both spatial and temporal patterns in ECG signals [3]. Despite these advancements, most existing systems focus only on detection using clean data and lack predictive capabilities. Recent research suggests that integrating noise-robust models with temporal forecasting can improve early risk prediction and support better clinical decision-making, particularly in resource-constrained environments [4], [5].
                     </p>
 
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 mt-4 leading-relaxed">
                     [1] G. D. Clifford, F. Azuaje, and P. E. McSharry, Advanced Methods and Tools for ECG Data Analysis. Artech House, 2006.<br/>
                     [2] P. Rajpurkar et al., “Cardiologist-level arrhythmia detection with convolutional neural networks,” Nature Medicine, vol. 25, no. 1, pp. 65–69, 2017.<br/>
                     [3] A. Vaswani et al., “Attention is all you need,” in Advances in Neural Information Processing Systems (NeurIPS), 2017.<br/>
