@@ -76,11 +76,11 @@ export default function Home() {
   };
 
   const techIcons = [
-    { src: nodejs, alt: "Node.js" },
     { src: react, alt: "React" },
     { src: tailwind, alt: "Tailwind CSS" },
     { src: reactnative, alt: "React Native" },
     { src: vite, alt: "Vite" },
+    { src: nodejs, alt: "Node.js" },
     { src: python, alt: "Python" },
     { src: flask, alt: "Flask" },
     { src: docker, alt: "Docker" },
