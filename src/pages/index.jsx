@@ -1357,7 +1357,7 @@ export default function Home() {
 
             </div>
 
-            <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 md:mt-8">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 mt-8 md:mt-8">
 
                 {teamMembers.map((member, index) => (
                 <div
