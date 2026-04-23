@@ -1627,20 +1627,44 @@ export default function Home() {
                 animation: gradientMove 10s ease infinite;
                 }
 
-                @keyframes stepScroll {
-                0%, 12% { transform: translateX(0); }
+                // @keyframes stepScroll {
+                // 0%, 12% { transform: translateX(0); }
 
-                16%, 28% { transform: translateX(-160px); }
-                32%, 44% { transform: translateX(-320px); }
-                48%, 60% { transform: translateX(-480px); }
-                64%, 76% { transform: translateX(-640px); }
-                80%, 92% { transform: translateX(-800px); }
+                // 16%, 28% { transform: translateX(-160px); }
+                // 32%, 44% { transform: translateX(-320px); }
+                // 48%, 60% { transform: translateX(-480px); }
+                // 64%, 76% { transform: translateX(-640px); }
+                // 80%, 92% { transform: translateX(-800px); }
+
+                // 100% { transform: translateX(0); }
+                // }
+
+                // .animate-step-scroll {
+                // animation: stepScroll 18s infinite ease-in-out;
+                // }
+
+                // .animate-step-scroll:hover {
+                // animation-play-state: paused;
+                // }
+
+                @keyframes stepScroll {
+                0%, 10% { transform: translateX(0); }
+
+                12%, 20% { transform: translateX(-176px); }
+                22%, 30% { transform: translateX(-352px); }
+                32%, 40% { transform: translateX(-528px); }
+                42%, 50% { transform: translateX(-704px); }
+                52%, 60% { transform: translateX(-880px); }
+                62%, 70% { transform: translateX(-1056px); }
+                72%, 80% { transform: translateX(-1232px); }
+                82%, 90% { transform: translateX(-1408px); }
+                92%, 98% { transform: translateX(-1584px); }
 
                 100% { transform: translateX(0); }
                 }
 
                 .animate-step-scroll {
-                animation: stepScroll 18s infinite ease-in-out;
+                animation: stepScroll 24s infinite ease-in-out;
                 }
 
                 .animate-step-scroll:hover {
