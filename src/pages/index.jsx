@@ -11,6 +11,8 @@ import mongodb from "../images/mongodb.png";
 import docker from "../images/docker.png";
 import flask from "../images/flask.png";
 import kubernetes from "../images/kubernetes.png";
+import tensorflow from "../images/tensorflow.png";
+import streamlit from "../images/streamlit.png";
 import supervisor from "../images/ThiliniJayalath.jpg";
 import cosupervisor from "../images/HansiDeSilva.jpg";
 import external from "../images/RohanGunawardhana.jpg";
@@ -80,9 +82,11 @@ export default function Home() {
     { src: tailwind, alt: "Tailwind CSS" },
     { src: reactnative, alt: "React Native" },
     { src: vite, alt: "Vite" },
+    { src: streamlit, alt: "StreamLit" },
     { src: nodejs, alt: "Node.js" },
     { src: python, alt: "Python" },
     { src: flask, alt: "Flask" },
+    { src: tensorflow, alt: "TensorFlow" },
     { src: docker, alt: "Docker" },
     { src: kubernetes, alt: "Kubernetes" },
     { src: mongodb, alt: "MongoDB" },
@@ -830,7 +834,7 @@ export default function Home() {
                     Frontend Technologies
                 </h3>
                 <div className="flex flex-col gap-2">
-                    {["React", "Vite", "Tailwind CSS", "React Native"].map((item, i) => (
+                    {["React", "Vite", "Tailwind CSS", "React Native", "StreamLit"].map((item, i) => (
                     <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm w-fit">
                         {item}
                     </span>
@@ -847,7 +851,7 @@ export default function Home() {
                     Backend Technologies
                 </h3>
                 <div className="flex flex-col gap-2">
-                    {["Node.js", "Python", "Flask", "MongoDB"].map((item, i) => (
+                    {["Node.js", "Python", "Flask", "TensorFlow", "MongoDB"].map((item, i) => (
                     <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm w-fit">
                         {item}
                     </span>
