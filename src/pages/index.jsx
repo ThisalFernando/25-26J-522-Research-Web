@@ -284,7 +284,7 @@ export default function Home() {
     {
         name: "Dr. I. H. D. Sandun Prabath Iddagoda",
         role: "External Supervisor",
-        desc: "Cardiac Electrophysiologist | Clinical Research | Digital Health",
+        desc: "Cardiac Electrophysiologist | Clinical Lecturer | Digital Health",
         email: "Please contact via LinkedIn",
         img: external02,
         linkedin: "https://www.linkedin.com/in/sandun-prabath-055a6787/",
