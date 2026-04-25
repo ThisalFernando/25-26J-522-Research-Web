@@ -15,7 +15,8 @@ import tensorflow from "../images/tensorflow.png";
 import streamlit from "../images/streamlit.png";
 import supervisor from "../images/ThiliniJayalath.jpg";
 import cosupervisor from "../images/HansiDeSilva.jpg";
-import external from "../images/RohanGunawardhana.jpg";
+import external01 from "../images/RohanGunawardhana.jpg";
+import external02 from "../images/SadunPrabath.jpg";
 import groupleader from "../images/GroupLeader.png";
 import member1 from "../images/Member1.png";
 import member2 from "../images/Member2.png";
@@ -275,10 +276,20 @@ export default function Home() {
         name: "Dr. Rohan Gunawardena",
         role: "External Supervisor",
         desc: "Cardiac Electrophysiologist | Clinical Research | Digital Health",
-        email: "rohan.g@gmail.com",
-        img: external,
+        email: "Please contact via LinkedIn",
+        img: external01,
+        linkedin: "https://www.linkedin.com/in/rohan-gunawardena-33352572/",
+        researchgate: "https://www.researchgate.net/profile/Rohan-Gunawardena",
     },
-    
+    {
+        name: "Dr. I. H. D. Sandun Prabath Iddagoda",
+        role: "External Supervisor",
+        desc: "Cardiac Electrophysiologist",
+        email: "Please contact via LinkedIn",
+        img: external02,
+        linkedin: "https://www.linkedin.com/in/sandun-prabath-055a6787/",
+        researchgate: "https://www.researchgate.net/publication/374603987_Cardiac_Resynchronization_Therapy_for_Heart_Failure_in_National_Hospital_of_Sri_Lanka_from_Year_2005_to_2020_-_A_Retrospective_Observational_Study",
+    }
   ];
 
   const teamMembers = [
@@ -1274,7 +1285,7 @@ export default function Home() {
             </div>
 
             {/* GRID */}
-            <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
 
                 {team.map((member, index) => (
                 <div
@@ -1316,7 +1327,7 @@ export default function Home() {
                     </div>
 
                     {/* SOCIAL ICONS */}
-                    {(member.linkedin || member.github || member.website) && (
+                    {(member.linkedin || member.researchgate || member.scholar) && (
                     <div className="flex justify-center gap-3 mt-4">
 
                         {member.scholar && (
