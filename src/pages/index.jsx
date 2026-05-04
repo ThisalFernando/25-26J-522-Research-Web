@@ -203,13 +203,15 @@ export default function Home() {
         title: "Final Report",
         date: "Yet to be submitted, link will be updated soon.",
         type: "Group",
-        status: "pending",
+        link: "https://drive.google.com/drive/folders/1TDbYik8eRf94wJMfH3N32sKsg0m9h4nI?usp=sharing",
+        status: "available",
     },
     {
         title: "Poster",
         date: "Yet to be submitted, link will be updated soon.",
         type: "Group",
-        status: "pending",
+        link: "https://drive.google.com/drive/folders/15NHwf_1sAK6i5DNxNzC8u1FOetlj5jPZ?usp=sharing",
+        status: "available",
     },
   ];
 
